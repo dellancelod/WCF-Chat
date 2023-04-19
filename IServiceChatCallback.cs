@@ -8,5 +8,6 @@ namespace WCF_Chat
 {
     internal interface IServiceChatCallback
     {
+        void MessageCallback(string message);
     }
 }
