@@ -32,10 +32,6 @@ namespace WCF_Chat
             throw new NotImplementedException();
         }
 
-        public void DoWork()
-        {
-        }
-
         public void SendMessage(string message)
         {
             throw new NotImplementedException();
