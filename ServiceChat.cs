@@ -12,11 +12,19 @@ namespace WCF_Chat
     public class ServiceChat : IServiceChat
     {
         List<User> users = new List<User>();
-        int nextId = 1;
 
-        public int Connect(string name)
+        public Guid Connect(string name)
         {
-            throw new NotImplementedException();
+            User user = new User()
+            {
+                ID = Guid.NewGuid(),
+                Name = name,
+                Context = OperationContext.Current
+            };
+
+            SendMessage(user.Name + " connected to chat!");
+            users.Add(user);
+            return user.ID;
         }
 
         public void Disconnect(int id)
