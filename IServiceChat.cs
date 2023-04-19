@@ -17,7 +17,7 @@ namespace WCF_Chat
         void Disconnect(Guid id);
 
         [OperationContract(IsOneWay = true)] //We do not expect response from Server
-        void SendMessage(string message);
+        void SendMessage(string message, Guid id);
 
 
     }
