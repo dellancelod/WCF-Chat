@@ -11,7 +11,7 @@ namespace WCF_Chat
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)] //Singleton Service for every client
     public class ServiceChat : IServiceChat
     {
-        List<User> users = new List<User>();
+        internal List<User> Users { get; set; }
 
         public Guid Connect(string name)
         {
@@ -23,7 +23,7 @@ namespace WCF_Chat
             };
 
             SendMessage(user.Name + " connected to chat!");
-            users.Add(user);
+            Users.Add(user);
             return user.ID;
         }
 
