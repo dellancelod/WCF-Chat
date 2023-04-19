@@ -19,6 +19,7 @@ namespace WCF_Chat
         [OperationContract(IsOneWay = true)] //We do not expect response from Server
         void SendMessage(string message, Guid id);
 
-
+        [OperationContract(IsOneWay = true)] //We do not expect response from Server
+        void SendMessage(string message);
     }
 }
