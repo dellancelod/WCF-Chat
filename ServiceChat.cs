@@ -7,6 +7,7 @@ using System.Text;
 
 namespace WCF_Chat
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)] //Singleton Service for every client
     public class ServiceChat : IServiceChat
     {
         public int Connect()
