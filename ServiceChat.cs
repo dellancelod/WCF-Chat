@@ -42,5 +42,10 @@ namespace WCF_Chat
         {
             throw new NotImplementedException();
         }
+
+        public void SendMessage(string message, Guid id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
