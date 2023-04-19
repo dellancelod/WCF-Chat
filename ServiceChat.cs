@@ -13,7 +13,8 @@ namespace WCF_Chat
     {
         List<User> users = new List<User>();
         int nextId = 1;
-        public int Connect()
+
+        public int Connect(string name)
         {
             throw new NotImplementedException();
         }
