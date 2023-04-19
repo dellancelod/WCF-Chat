@@ -11,5 +11,6 @@ namespace WCF_Chat.Model
     {
         public Guid ID { get; set; }
         public string Name { get; set; }
+        public OperationContext Context { get; set; }
     }
 }
