@@ -4,12 +4,14 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WCF_Chat.Model;
 
 namespace WCF_Chat
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)] //Singleton Service for every client
     public class ServiceChat : IServiceChat
     {
+        List<User> users = new List<User>();
         public int Connect()
         {
             throw new NotImplementedException();
