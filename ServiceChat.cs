@@ -12,6 +12,7 @@ namespace WCF_Chat
     public class ServiceChat : IServiceChat
     {
         List<User> users = new List<User>();
+        int nextId = 1;
         public int Connect()
         {
             throw new NotImplementedException();
