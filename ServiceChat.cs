@@ -27,9 +27,15 @@ namespace WCF_Chat
             return user.ID;
         }
 
-        public void Disconnect(int id)
+        public void Disconnect(Guid id)
         {
-            throw new NotImplementedException();
+            var user = Users.FirstOrDefault(i => i.ID == id);
+
+            if (user != null)
+            {
+                Users.Remove(user);
+                SendMessage(user.Name + " disconnected!");
+            }
         }
 
         public void SendMessage(string message)
