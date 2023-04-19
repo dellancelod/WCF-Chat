@@ -45,7 +45,18 @@ namespace WCF_Chat
 
         public void SendMessage(string message, Guid id)
         {
-            throw new NotImplementedException();
+            foreach (var item in message)
+            {
+                string answer = DateTime.Now.ToShortTimeString();
+                var user = Users.FirstOrDefault(i => i.ID == id);
+
+                if (user != null)
+                {
+                    answer += ": " + User.Name + " ";
+                }
+
+                answer += message;
+            }
         }
     }
 }
