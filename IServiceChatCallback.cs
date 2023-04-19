@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
-    Clientside Interface
+    Clientside Interface for receiving messages
 */
 namespace WCF_Chat
 {
