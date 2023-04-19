@@ -7,7 +7,7 @@ using System.Text;
 
 namespace WCF_Chat
 {
-    [ServiceContract]
+    [ServiceContract(CallbackContract = typeof(IServerChatCallback))]
     public interface IServiceChat
     {
         [OperationContract]
@@ -18,6 +18,7 @@ namespace WCF_Chat
 
         [OperationContract(IsOneWay = true)] //We do not expect response from Server
         void SendMessage(string message);
+
 
     }
 }
