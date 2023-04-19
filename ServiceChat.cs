@@ -40,22 +40,31 @@ namespace WCF_Chat
 
         public void SendMessage(string message)
         {
-            throw new NotImplementedException();
+            foreach (var item in Users)
+            {
+                string answer = DateTime.Now.ToShortTimeString();
+
+                answer += message;
+
+                item.Context.GetCallbackChannel<IServerChatCallback>().MessageCallback(answer);
+            }
         }
 
         public void SendMessage(string message, Guid id)
         {
-            foreach (var item in message)
+            foreach (var item in Users)
             {
                 string answer = DateTime.Now.ToShortTimeString();
                 var user = Users.FirstOrDefault(i => i.ID == id);
 
                 if (user != null)
                 {
-                    answer += ": " + User.Name + " ";
+                    answer += ": " + user.Name + " ";
                 }
 
                 answer += message;
+
+                item.Context.GetCallbackChannel<IServerChatCallback>().MessageCallback(answer);
             }
         }
     }
