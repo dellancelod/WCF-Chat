@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ServiceModel;
 
 namespace WCF_Chat.Model
@@ -12,5 +8,6 @@ namespace WCF_Chat.Model
         public Guid ID { get; set; }
         public string Name { get; set; }
         public OperationContext Context { get; set; }
+
     }
 }
