@@ -12,6 +12,6 @@ namespace WCF_Chat
     public interface IServiceChat
     {
         [OperationContract]
-        void DoWork();
+        int Connect();
     }
 }
