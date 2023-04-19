@@ -12,7 +12,7 @@ namespace WCF_Chat
 {
     internal interface IServerChatCallback
     {
-        [OperationContract]
+        [OperationContract(IsOneWay = true)] //We do not expect response from client
         void MessageCallback(string message);
     }
 }
