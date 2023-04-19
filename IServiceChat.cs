@@ -11,7 +11,7 @@ namespace WCF_Chat
     public interface IServiceChat
     {
         [OperationContract]
-        int Connect();
+        int Connect(string name);
 
         [OperationContract]
         void Disconnect(int id);
