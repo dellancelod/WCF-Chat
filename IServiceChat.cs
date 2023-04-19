@@ -13,5 +13,7 @@ namespace WCF_Chat
     {
         [OperationContract]
         int Connect();
+        [OperationContract]
+        int Disconnect();
     }
 }
