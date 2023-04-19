@@ -7,7 +7,6 @@ using System.Text;
 
 namespace WCF_Chat
 {
-    // ПРИМЕЧАНИЕ. Можно использовать команду "Переименовать" в меню "Рефакторинг", чтобы изменить имя интерфейса "IServiceChat" в коде и файле конфигурации.
     [ServiceContract]
     public interface IServiceChat
     {
