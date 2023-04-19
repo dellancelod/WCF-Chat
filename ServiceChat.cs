@@ -9,8 +9,23 @@ namespace WCF_Chat
 {
     public class ServiceChat : IServiceChat
     {
+        public int Connect()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Disconnect(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DoWork()
         {
+        }
+
+        public void SendMessage(string message)
+        {
+            throw new NotImplementedException();
         }
     }
 }
